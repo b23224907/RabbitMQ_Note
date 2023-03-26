@@ -39,3 +39,15 @@ rabbitmq-plugins enable rabbitmq_management
 #然后使用http://youadmin:15672/即可访问，默认用户名密码都是guest
 ```
 
+5. 修改用户密码
+
+```
+#参考第4步进入容器
+
+#搜索全部用户
+rabbitmqctl  list_users
+
+#根据用户名修改密码
+rabbitmqctl  change_password  [Username]  'Newpassword'
+```
+
